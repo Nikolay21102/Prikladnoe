@@ -12,8 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ShopApi.Contracts\Contracts.csproj" />
-      <ProjectReference Include="..\ShopApi.LoggerService\LoggerService.csproj" />
+      <ProjectReference Include="..\Contracts\Contracts.csproj" />
+      <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
     </ItemGroup>
 
 </Project>
