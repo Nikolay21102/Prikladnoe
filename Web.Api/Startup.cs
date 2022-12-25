@@ -24,7 +24,13 @@ public class Startup
         services.ConfigureLoggerService();
         services.ConfigureSqlContext(Configuration);
         services.ConfigureRepositoryManager();
-        services.AddControllers();
+        services.AddControllers(config =>
+            {
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
+            })
+            .AddXmlDataContractSerializerFormatters()
+            .AddCustomCSVFormatter();
     }
     
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerManager logger)
