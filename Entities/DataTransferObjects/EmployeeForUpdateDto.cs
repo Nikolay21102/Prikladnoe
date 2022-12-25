@@ -1,8 +1,7 @@
-﻿namespace ShopApi.Entities.DataTransferObjects;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class EmployeeForUpdateDto
+namespace ShopApi.Entities.DataTransferObjects;
+
+public class EmployeeForUpdateDto : EmployeeForManipulationDto
 {
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public string Position { get; set; }
 }
